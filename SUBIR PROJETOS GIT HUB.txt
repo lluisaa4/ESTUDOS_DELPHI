@@ -1,0 +1,48 @@
+COMO SUBIR UM PROJETO NO GIT HUB?
+
+No Git Bash:
+__________________________________________				  
+git config --global user.name "Seu Nome"  ]
+---					  |
+git config --global user.name "Seu Nome"  | -> SÓ SE FOR A PRIMEIRA VEZ USANDO
+---                                       |
+__________________________________________]
+
+1°: Clique com o botão direito na pasta do projeto e selecione "Opens Git Bash Here".
+2°: Agora execute os seguintes comando:
+
+git init
+---
+git add .			*'o . significa todos os arquivos da pasta'*
+---
+git commit -m "Primeiro commit do projeto Delphi"
+---
+git remote add origin https://github.com/seunome/meu-projeto-delphi.git
+---
+git push -u origin main
+
+OU
+
+git push -u origin master
+
+
+E AGORA PARA ATUALIZAR O PROJETO?
+
+1°: Clique com o botão direito na pasta do projeto e selecione "Opens Git Bash Here".
+2°: Agora execute os seguintes comando:
+--------------------
+git add .	    ]	
+		    ]	
+OU		    ]			
+		    ]		
+git add Projeto.dpr ]
+___________________ ]	
+
+git commit -m "Descrição das mudanças que você fez"
+---
+git push
+
+OU
+
+git push origin master
+		  

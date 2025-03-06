@@ -1,0 +1,65 @@
+unit Aula04; //eh o nome do arquivo
+
+interface //agr eh tudo que tem de informação
+
+uses //onde da visibilidade outros arquivos
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Btnprimeiro: TButton;
+    Btnsegundo: TButton;
+    Memo1: TMemo;
+    procedure BtnprimeiroClick(Sender: TObject);
+  private
+    FValorTotal : Integer;
+    FAliquota : Double;
+  public
+    function CalculaValor: Integer;
+    function CalculaTributos: Double;
+    procedure VisualizaMsg;
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.BtnprimeiroClick(Sender: TObject);
+var
+  lValor: Integer;
+begin
+  FValorTotal := 100;
+  FAliquota := 100;
+
+  lValor := CalculaValor;
+
+  Memo1.Lines.Add('Laura');
+  Memo1.Lines.Add('===Metodo com retorno (Function)===');
+  Memo1.Lines.Add(lValor.ToString);
+
+  Memo1.Lines.Add('===Metodo com retorno 2 (Function)===');
+  Memo1.Lines.Add(CalculaTributos.ToString);
+
+  VisualizaMsg;
+end;
+
+function TForm1.CalculaTributos: Double;
+begin
+  Result := FAliquota * 0.1; //multiplica por 10%
+end;
+
+function TForm1.CalculaValor: Integer;
+begin
+  Result := FValorTotal + 1;
+end;
+
+procedure TForm1.VisualizaMsg;
+begin
+  ShowMessage('Esou dentro de uma procedure');
+end;
+
+end.

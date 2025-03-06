@@ -1,0 +1,40 @@
+unit Aula04; //eh o nome do arquivo
+
+interface //agr eh tudo que tem de informação
+
+uses //onde da visibilidade outros arquivos
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Btnprimeiro: TButton;
+    Btnsegundo: TButton;
+    Memo1: TMemo;
+    procedure BtnprimeiroClick(Sender: TObject);
+  private
+    FValor : Integer;
+  public
+    function CalculaValor: Integer;
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.BtnprimeiroClick(Sender: TObject);
+begin
+  Memo1.Lines.Add('Retorno');
+end;
+
+function TForm1.CalculaValor: Integer;
+begin
+
+end;
+
+end.
+
+
